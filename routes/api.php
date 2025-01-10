@@ -28,3 +28,6 @@ Route::get('/fruit/{id}', [FruitController::class, 'getFruitById']);
 
 // Add Fruit
 Route::post('addFruit', [FruitController::class, 'addFruit']);
+
+// Update Fruit
+Route::put('updateFruit/{id}', [FruitController::class, 'updateFruit']);

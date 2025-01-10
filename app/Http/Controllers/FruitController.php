@@ -23,4 +23,14 @@ class FruitController extends Controller
         $fruit = Fruit::create($request->all());
         return response($fruit);
     }
+
+    public function updateFruit(Request $request, $id) {
+        $fruit = Fruit::find($id);
+        if(is_null($fruit)) {
+            return response()->json(['message' => 'Fruit not found']);
+        }
+        $fruit->update($request->all());
+        return response($fruit, 200);
+        
+    }
 }
