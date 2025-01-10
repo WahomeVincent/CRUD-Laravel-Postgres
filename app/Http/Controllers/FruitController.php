@@ -33,4 +33,14 @@ class FruitController extends Controller
         return response($fruit, 200);
         
     }
+
+    public function deleteFruit(Request $request, $id) {
+        $fruit = Fruit::find($id);
+        if(is_null($fruit)) {
+            return response()->json(['message' => 'Fruit not found']);
+        }
+        $fruit->delete();
+        return response()->json(null);
+        
+    }
 }

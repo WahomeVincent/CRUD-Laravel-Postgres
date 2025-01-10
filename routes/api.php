@@ -31,3 +31,6 @@ Route::post('addFruit', [FruitController::class, 'addFruit']);
 
 // Update Fruit
 Route::put('updateFruit/{id}', [FruitController::class, 'updateFruit']);
+
+// Delete Fruit
+Route::delete('deleteFruit/{id}', [FruitController::class, 'deleteFruit']);
