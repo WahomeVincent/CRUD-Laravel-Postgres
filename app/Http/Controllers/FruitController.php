@@ -40,7 +40,7 @@ class FruitController extends Controller
             return response()->json(['message' => 'Fruit not found']);
         }
         $fruit->delete();
-        return response()->json(null);
+        return response()->json(['message' => 'Fruit removed']);
         
     }
 }

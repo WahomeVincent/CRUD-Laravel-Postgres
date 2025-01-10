@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fruit extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'pricep', 'created_at', 'updated_at'];
 
+    // Add the fields that are allowed to be mass-assigned
+    protected $fillable = ['name', 'price', 'created_at', 'updated_at'];
 }
