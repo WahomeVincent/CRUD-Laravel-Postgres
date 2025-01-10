@@ -25,3 +25,6 @@ Route::get('/fruits', [FruitController::class, 'getFruit']);
 
 //Get a specific fruit
 Route::get('/fruit/{id}', [FruitController::class, 'getFruitById']);
+
+// Add Fruit
+Route::post('addFruit', [FruitController::class, 'addFruit']);

@@ -16,6 +16,11 @@ class FruitController extends Controller
         if(is_null($fruit)) {
             return response()->json(['message' => 'Fruit not found']);
         }
-        return response()->json($fruit::find($id), 200);
+        return response()->json($fruit, 200);
+    }
+
+    public function addFruit(Request $request) {
+        $fruit = Fruit::create($request->all());
+        return response($fruit);
     }
 }

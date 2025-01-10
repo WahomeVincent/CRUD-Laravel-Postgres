@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Fruit extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'pricep', 'created_at', 'updated_at'];
+
 }
